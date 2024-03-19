@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Education Details</title>
+</head>
+<body>
+    <h1>Past Education Details</h1>
+    <form action="/submit-past-education" method="POST">
+        <input type="hidden" name="row_id" value="<%=row_id %>">
+        <div>
+            <label for="schoolName">School Name:</label>
+            <input type="text" name="schoolName" id="schoolName">
+        </div>
+        <div>
+            <label for="state">State:</label>
+            <input type="text" name="state" id="state">
+        </div>
+        <div>
+            <label for="passingYear">Passing Year:</label>
+            <input type="text" name="passingYear" id="passingYear">
+        </div>
+        <div>
+            <label for="totalMarksObtained">Total Marks Obtained:</label>
+            <input type="number" name="totalMarksObtained" id="totalMarksObtained">
+        </div>
+        <div>
+            <label for="outOfTotalMarks">Out of Total Marks:</label>
+            <input type="number" name="outOfTotalMarks" id="outOfTotalMarks">
+        </div>
+        <div>
+            <label for="percentage">Percentage:</label>
+            <input type="text" name="percentage" id="percentage" readonly>
+        </div>
+        <button type="button" onclick="calculatePercentage()">Calculate Percentage</button>
+
+        <script>
+            function calculatePercentage() {
+                const totalMarks = parseFloat(document.getElementById('totalMarksObtained').value);
+                const outOfTotalMarks = parseFloat(document.getElementById('outOfTotalMarks').value);
+                const percentage = (totalMarks / outOfTotalMarks) * 100;
+                document.getElementById('percentage').value = percentage.toFixed(2) + '%';
+            }
+        </script>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

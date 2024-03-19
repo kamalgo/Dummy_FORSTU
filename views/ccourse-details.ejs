@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Course Details Form</title>
+</head>
+<body>
+    <h1>C Course Details Form</h1>
+    <form action="/submit-course-details" method="POST">
+        <input type="hidden" name="row_id" value="<%=row_id %>">
+        <div>
+            <label for="courseType">Course Type:</label>
+            <select name="courseType" id="courseType">
+                <option value="BSc">BSc</option>
+                <option value="MSc">MSc</option>
+            </select>
+        </div>
+        <div>
+            <label for="courseName">Course Name:</label>
+            <select name="courseName" id="courseName">
+                <option value="C Programming">C Programming</option>
+                <option value="Advanced C">Advanced C</option>
+                
+            </select>
+        </div>
+        <div>
+            <label for="specialization">Specialization:</label>
+            <select name="specialization" id="specialization">
+                <option value="General">General</option>
+                <option value="Data Structures">Data Structures</option>
+            </select>
+        </div>
+        <div>
+            <label for="currentYear">Current Year:</label>
+            <select name="currentYear" id="currentYear">
+                <option value="First">First</option>
+                <option value="Second">Second</option>
+            </select>
+        </div>
+        <div>
+            <label for="instituteName">Name of Institute:</label>
+            <select name="instituteName" id="instituteName">
+                <option value="ABC Institute">ABC Institute</option>
+                <option value="XYZ Institute">XYZ Institute</option>
+            </select>
+        </div>
+        <div>
+            <label for="instituteAddress">Address of Institute:</label>
+            <select name="instituteAddress" id="instituteAddress">
+                <option value="Address Line 1">Address Line 1</option>
+                <option value="Address Line 2">Address Line 2</option>
+            </select>
+        </div>
+        <div>
+            <label for="startingYear">Course Starting Year/Admission Year:</label>
+            <input type="text" name="startingYear" id="startingYear">
+        </div>
+        <div>
+            <label for="tutionFees">Tuition Fees:</label>
+            <input type="number" name="tutionFees" id="tutionFees">
+        </div>
+        <div>
+            <label for="nonTutionFees">Non-Tuition Fees:</label>
+            <input type="number" name="nonTutionFees" id="nonTutionFees">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html> 
+

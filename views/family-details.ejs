@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Details</title>
+</head>
+<body>
+    <h2>Family Details</h2>
+    
+    <form action="/submit-family-details" method="POST">
+        <input type="hidden" name="row_id" value="<%=row_id %>">
+
+        <div>
+            <label for="fatherName">Father's Name:</label>
+            <input type="text" id="fatherName" name="fatherName" required>
+        </div>
+        <div>
+            <label for="fatherEducation">Father's Educational Qualification:</label>
+            <input type="text" id="fatherEducation" name="fatherEducation" required>
+        </div>
+        <div>
+            <label for="fatherOccupation">Father's Occupation:</label>
+            <input type="text" id="fatherOccupation" name="fatherOccupation" required>
+        </div>
+        <div>
+            <label for="motherName">Mother's Name:</label>
+            <input type="text" id="motherName" name="motherName" required>
+        </div>
+        <div>
+            <label for="motherEducation">Mother's Educational Qualification:</label>
+            <input type="text" id="motherEducation" name="motherEducation" required>
+        </div>
+        <div>
+            <label for="motherOccupation">Mother's Occupation:</label>
+            <input type="text" id="motherOccupation" name="motherOccupation" required>
+        </div>
+        <div>
+            <label for="parentsMobile">Parents' Mobile Number:</label>
+            <input type="text" id="parentsMobile" name="parentsMobile" required>
+        </div>
+        <div>
+            <label for="parentsIncome">Parents' Annual Income from All Sources:</label>
+            <input type="number" id="parentsIncome" name="parentsIncome" required>
+        </div>
+        <!-- Add more fields for family details as needed -->
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

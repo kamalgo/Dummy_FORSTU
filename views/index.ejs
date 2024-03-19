@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+<h2>Profile Details</h2>
+
+<table>
+   <tr>
+    <td>Personal Details</td>
+    <td>Griffin</td>
+    <td>
+      <form action="/edit-profile" method="post">
+          <!-- Hidden input field to pass user_id -->
+          <input type="hidden" name="user_id" value="<%= user_id %>">
+          <!-- Submit button to trigger form submission -->
+          <button type="submit">Click to edit</button>
+      </form>
+  </td>
+</tr>
+  <tr>
+    <td>Family Details</td>
+    <td>Griffin</td>
+    <td><a href="/family-details"><button type="button">Click to edit</button></a></td>
+  </tr>
+  <tr>
+    <td>Communication Details</td>
+    <td>Swanson</td>
+    <td><a href="/com-details"><button type="button">Click to edit</button></a></td>
+  </tr>
+  <tr>
+    <td>Bank Details</td>
+    <td>Brown</td>
+    <td><a href="/edit-profile"><button type="button">Click to edit</button></a></td>
+  </tr>
+
+  <tr>
+    <td>Current Course Details</td>
+    <td>Brown</td>
+    <td><a href="/edit-profile"><button type="button">Click to edit</button></a></td>
+  </tr>
+
+  <tr>
+    <td>Past Education Details</td>
+    <td>Brown</td>
+    <td><a href="/edit-profile"><button type="button">Click to edit</button></a></td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+

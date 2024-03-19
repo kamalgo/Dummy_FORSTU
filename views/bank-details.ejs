@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Details</title>
+</head>
+<body>
+    <h1>Bank Details</h1>
+    <form action="/submit-bank-details" method="POST">
+        <input type="hidden" name="row_id" value="<%=row_id %>">
+        <div>
+            <label for="accountNumber">Bank Account Number:</label>
+            <input type="text" id="accountNumber" name="accountNumber" required>
+        </div>
+        <div>
+            <label for="ifscCode">Bank IFSC Code:</label>
+            <input type="text" id="ifscCode" name="ifscCode" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

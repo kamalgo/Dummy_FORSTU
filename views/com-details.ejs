@@ -1,0 +1,66 @@
+<!-- communication-details.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication Details</title>
+    <link rel="stylesheet" href="/stylesheets/style.css"> <!-- Include your CSS file -->
+</head>
+<body>
+    <h2>Communication Details</h2>
+
+    <form action="/submit-com-details" method="POST">
+        <input type="hidden" name="row_id" value="<%=row_id %>">
+        <div>
+            <label for="currentAddress">Current Address:</label>
+            <input type="text" id="currentAddress" name="currentAddress" required>
+        </div>
+        <div>
+            <label for="currentState">State:</label>
+            <select id="currentState" name="currentState">
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <!-- Add more states here -->
+            </select>
+        </div>
+        <div>
+            <label for="currentDistrict">Current District:</label>
+            <input type="text" id="currentDistrict" name="currentDistrict" required>
+        </div>
+        <div>
+            <label for="currentPincode">Pincode:</label>
+            <input type="text" id="currentPincode" name="currentPincode" required>
+        </div>
+        <div>
+            <input type="checkbox" id="sameAsAbove" name="sameAsAbove">
+            <label for="sameAsAbove">Same as Above</label>
+        </div>
+        <div>
+            <label for="permanentAddress">Permanent Address:</label>
+            <input type="text" id="permanentAddress" name="permanentAddress" required>
+        </div>
+        <div>
+            <label for="permanentState">State:</label>
+            <select id="permanentState" name="permanentState">
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <!-- Add more states here -->
+            </select>
+        </div>
+        <div>
+            <label for="permanentDistrict">Permanent District:</label>
+            <input type="text" id="permanentDistrict" name="permanentDistrict" required>
+        </div>
+        <div>
+            <label for="permanentPincode">Pincode:</label>
+            <input type="text" id="permanentPincode" name="permanentPincode" required>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
